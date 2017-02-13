@@ -12,9 +12,8 @@ Mac OS:
 find . -type f -exec sed -i "" 's/templatecom/templatecomreplaced/g' {} \;
 find . -type f -exec sed -i "" 's/templateapp/templateappreplaced/g' {} \;
 
-git checkout gradle/
-git checkout gradlew
 
+rm -rf gradle/ && rm -rf app/src/main/res/ && git checkout gradle/ && git checkout app/src/main/res/ 
 
 
 
