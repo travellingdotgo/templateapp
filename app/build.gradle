@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'maven'
 
 android {
     compileSdkVersion 23
@@ -17,6 +18,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -26,4 +31,6 @@ dependencies {
 
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.github.ksoichiro:android-observablescrollview:1.5.0'
+
+    compile 'com.moredian.commonlib:guardian:2.2.8@aar'
 }
